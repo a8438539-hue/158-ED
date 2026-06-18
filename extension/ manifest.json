@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "LINE Dispatcher",
+  "version": "1.0",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["https://line.me/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [{
+    "matches": ["https://line.me/*"],
+    "js": ["content.js"]
+  }]
+}
